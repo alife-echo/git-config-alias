@@ -1,0 +1,36 @@
+# -- CONFIGURANGO GIT
+
+git config --system --> configuração para maquina toda, para qualquer usuario
+
+git config --global --> configuração para o usuario do sistema em especifico
+
+git config --local --> configurações daquele projeto em especifico
+
+git config --global --edit --> editar as configurações do git daquele usuario em especifico
+
+git config --global core.editor code
+
+-s ---> mostra apenas os nomes arquivos modificados, sem detalhes
+
+git log --oneline ---> mostra a hash do commit e o nome titulo do commit
+
+'%cn' --> commiter name, nome da pessoa que fez o commit
+
+'%cr' --> data relativa do commit
+
+'%H' --> mostra os hashs do commit
+
+'%h' --> mostra a hash reduzida do commit
+
+'%d' --> mostra a branch
+
+'%s' --> mensagem do commit
+
+git log --pretty=format:'%h %d %s - %cn, %cr'
+
+[alias] --> config atalhos
+	s = !git status -s --> mostra apenas os nomes do commit,sem detalhes
+	c = !git add --all && git commit -m --> adicionar todas as alterações e fazer o commit, esperando apenas o titulo
+	l = !git log --pretty=format:'%C(blue)%h %C(red)%d %C(white)%s - %C(cyan)%cn,%C(green)%cr' --> personalização do git log especifando quais campos vão aparecer e estilizando os mesmos
+
+
